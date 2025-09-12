@@ -2,8 +2,8 @@ using System;
 
 class Program
 {
-    static PromptGenerator promptGen = new PromptGenerator();
-    static Journal myJournal = new Journal();
+    static PromptGenerator _promptGen = new PromptGenerator();
+    static Journal _myJournal = new Journal();
 
     static void Main(string[] args)
     {
@@ -68,33 +68,33 @@ class Program
                 {
                     Entry entry = new Entry();
 
-                    string newPrompt = promptGen.GetRandomPrompt();
+                    string newPrompt = _promptGen.GetRandomPrompt();
                     Console.Write($"{newPrompt} \n> ");
 
                     string input = Console.ReadLine();
-                    entry.entryText = input;
-                    entry.promptText = newPrompt;
+                    entry._entryText = input;
+                    entry._promptText = newPrompt;
 
-                    myJournal.AddEntry(entry);
+                    _myJournal.AddEntry(entry);
                     break;
                 }
             case 2:
                 {
-                    myJournal.Display();
+                    _myJournal.Display();
                     break;
                 }
             case 3:
                 {
                     Console.Write("Enter file name: ");
                     string input = Console.ReadLine();
-                    myJournal.LoadFromFile(input);
+                    _myJournal.LoadFromFile(input);
                     break;
                 }
             case 4:
                 {
                     Console.Write("Enter Filename> ");
                     string fileName = Console.ReadLine();
-                    myJournal.SaveToFile(fileName);
+                    _myJournal.SaveToFile(fileName);
                     break;
                 }
             case 5:

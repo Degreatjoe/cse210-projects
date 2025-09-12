@@ -56,11 +56,11 @@ public class Journal
                 foreach (Entry entry in _entries)
                 {
                     writer.WriteLine("==="); // delimiter
-                    writer.WriteLine($"Date: {entry.dateString}");
-                    writer.WriteLine($"Time: {entry.timeStamp}");
-                    writer.WriteLine($"Prompt: {entry.promptText}");
+                    writer.WriteLine($"Date: {entry._dateString}");
+                    writer.WriteLine($"Time: {entry._timeStamp}");
+                    writer.WriteLine($"Prompt: {entry._promptText}");
                     writer.WriteLine("Entry:");
-                    writer.WriteLine(entry.entryText);
+                    writer.WriteLine(entry._entryText);
                 }
             }
             Console.WriteLine($"Journal saved to '{filename}'.");
@@ -132,10 +132,10 @@ public class Journal
                 {
                     Entry entry = new Entry
                     {
-                        dateString = dateString,
-                        timeStamp = timeStamp,
-                        promptText = promptText,
-                        entryText = entryText
+                        _dateString = dateString,
+                        _timeStamp = timeStamp,
+                        _promptText = promptText,
+                        _entryText = entryText
                     };
                     _entries.Add(entry);
                 }
@@ -162,8 +162,8 @@ public class Journal
 
         foreach (Entry entry in _entries)
         {
-            string key = entry.dateString;
-            string value = $"{entry.timeStamp} - Prompt: {entry.promptText}\n{entry.entryText}.";
+            string key = entry._dateString;
+            string value = $"{entry._timeStamp} - Prompt: {entry._promptText}\n{entry._entryText}.";
 
             if (!dict.ContainsKey(key)) // checks if date already exist
             {

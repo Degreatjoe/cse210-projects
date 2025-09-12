@@ -6,7 +6,7 @@ using System;
 
 public class PromptGenerator
 {
-    List<string> prompts= new List<string>
+    List<string> _prompts= new List<string>
     {
         "Who was the most interesting person I interacted with today?",
         "What was the best part of my day?",
@@ -25,10 +25,10 @@ public class PromptGenerator
          * Return: a string of prompt
         */
         Random randGen = new Random();
-        int promptLen = prompts.Count;
+        int promptLen = _prompts.Count;
         int index = randGen.Next(0, promptLen);
 
-        return prompts[index];
+        return _prompts[index];
 
     }
 }
