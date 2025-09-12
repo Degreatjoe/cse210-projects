@@ -4,6 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
+        /**
+         * Main - The entry of the program.
+         * @args: arguments.
+         * Return: nothing
+        */
         Job job1 = new Job();
 
         job1._company = "microsoft";
