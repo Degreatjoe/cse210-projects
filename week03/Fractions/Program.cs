@@ -7,11 +7,11 @@ class Program
         Console.WriteLine("Hello World! This is the Fractions Project.");
         Fraction fractions1 = new Fraction();
         Console.WriteLine(fractions1.GetFractionString());
-        Console.WriteLine(fractions1.getTop());
+        Console.WriteLine(fractions1.GetTop());
 
         Fraction fractions2 = new Fraction(5);
         Console.WriteLine(fractions2.GetFractionString());
-        Console.WriteLine(fractions2.getTop());
+        Console.WriteLine(fractions2.GetTop());
 
         Fraction fractions3 = new Fraction();
         fractions3.SetTop(3);
