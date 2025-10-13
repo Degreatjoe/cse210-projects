@@ -1,0 +1,2 @@
+0
+SimpleGoal:fight |i want to fiht |30|False
